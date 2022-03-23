@@ -1,0 +1,7 @@
+﻿  sortbox.cpp
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(393,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(14,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(9): message : во время компиляции функции-члена класс шаблон "SortBox<int>::SortBox(void)"
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(401): message : выполняется компиляция ссылки на экземпляр шаблон функции "SortBox<int>::SortBox(void)"
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(401): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "SortBox<int>"
+  sortbox.vcxproj -> C:\Users\max\source\repos\sortbox\x64\Debug\sortbox.exe
