@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <cstdlib>
 #include <ctime>
+#include <cmath>
 
 #include "sortbox.h"
 
@@ -87,6 +88,14 @@ inline void SortBox<T>::swap(T* ptr1, T* ptr2) {
     *ptr1 = *ptr2;
     *ptr2 = mem;
 }
+
+/*
+template <typename T>
+inline void SortBox<T>::putIn(T* ptr1, T* ptr2, const int size) {
+
+}
+*/
+
 
 template <typename T>
 void SortBox<T>::bubble(T* inp, const int size, bool inverse) {
@@ -323,33 +332,54 @@ int SortBox<T>::getDigit(T inp, int digit) {
     int digitAmount = 0;
     T tempInp = inp;
 
-    for (digitAmount = 0; inp > 10 * digitAmount; ++digitAmount);
-    std::cout << digitAmount << std::endl;
+    for (digitAmount = 0; inp >= pow(10, digitAmount); ++digitAmount);
+    //std::cout << digitAmount << std::endl;
+    digitAmount -= 1;
+    if (digit >= digitAmount + 1) return 0;
 
-    while(digitAmount > digit) {
+    while(digitAmount >= digit) {
         res = 0;
-        while (tempInp > 10 * digitAmount) {
-            if (digitAmount == 0) {
-                tempInp -= 1;
-                ++res;
-            }
-            else tempInp -= digitAmount * 10;
+        while (tempInp >= pow(10, digitAmount)){
+            tempInp -= pow(10, digitAmount);
+
+            ++res;
         }
+        --digitAmount;
     }
 
     return res;
 
 }
 
+/*
 template <typename T>
 void SortBox<T>::radix(T* inp, const int size, bool inverse) {
     
     clock_t time = sortInit(inp, size);
 
-    
+    int i = 0;
+    int digitInNum = 0;
+
+    while (digitInNum < 4) {
+        i = 0;
+        for (int digit = 0; digit < 10; ++digit) {
+            for (T* ptr = begin + i; ptr != end; ++ptr) {
+                if (digit == getDigit(*ptr, digitInNum)) {
+                    if (*ptr != *(begin + i)) {
+                        putIn(ptr, begin + i, size);
+                    }
+                    ++i;
+                    ptr = begin + i - 1;
+                }
+            }
+        }
+        ++digitInNum;
+    }
 
     std::cout << "Sorting took " << (long double)(time) / CLOCKS_PER_SEC << " seconds" << std::endl;
 }
+
+*/
 
 template <typename T>
 void SortBox<T>::bogo(T* inp, const int size, bool inverse) {
@@ -392,10 +422,10 @@ T* generateArr(int sizeOfInp) {
 int main(){
     srand(time(0));
 
-    //int sizeOfInp;
-    //std::cin >> sizeOfInp;
+    int sizeOfInp;
+    std::cin >> sizeOfInp;
 
-    //int* inp = generateArr<int>(sizeOfInp);
+    int* inp = generateArr<int>(sizeOfInp);
 
     //SortBox<int>::showProc(true);
     SortBox<int> s;
@@ -406,8 +436,9 @@ int main(){
     //s.selection(inp, sizeOfInp);
     //s.quick(inp, sizeOfInp);
     //s.merge(inp, sizeOfInp);
-    std::cout << s.getDigit(123, 2);
+    //s.radix(inp, sizeOfInp);
+    //std::cout << s.getDigit(125454, 44);
 
     std::cout << '\n';
-    //for (int n = 0; n < sizeOfInp; n++) std::cout << inp[n] << ' ';
+    for (int n = 0; n < sizeOfInp; n++) std::cout << inp[n] << ' ';
 }

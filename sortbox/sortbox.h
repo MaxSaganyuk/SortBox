@@ -12,6 +12,7 @@ private:
 	HANDLE hConsole;
 
 	clock_t sortInit(T* inp, const int size);
+	//inline void putIn(T* ptr1, T* ptr2, const int size);
 	inline void swap(T* ptr);
 	inline void swap(T* ptr1, T* ptr2);
 	inline bool compare(T* ptr, bool inverse);
@@ -25,10 +26,11 @@ private:
 	void mergePart(T* inp, int left, int mid, int right, bool inverse);
 	void mergeSort(T* inp, int lowPoint, int highPoint, bool inverse);
 
-	//int getDigit(T* inp, int digit);
+
 public:
 	SortBox();
 	~SortBox();
+
 	int getDigit(T inp, int digit);
 
 	static void showProc() { boolShowProc = !boolShowProc; }
@@ -51,7 +53,7 @@ public:
 	void merge(T* inp, const int size, bool inverse = false);
 
 	// distribution sorts
-	void radix(T* inp, const int size, bool inverse = false);
+	//void radix(T* inp, const int size, bool inverse = false);
 
 	// joke sorts
 	void bogo(T* inp, int size, bool inverse = false);

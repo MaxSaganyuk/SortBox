@@ -1,7 +1,24 @@
 ﻿  sortbox.cpp
-C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(393,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(14,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(9): message : во время компиляции функции-члена класс шаблон "SortBox<int>::SortBox(void)"
-C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(401): message : выполняется компиляция ссылки на экземпляр шаблон функции "SortBox<int>::SortBox(void)"
-C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(401): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "SortBox<int>"
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(430,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(15,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(10): message : во время компиляции функции-члена класс шаблон "SortBox<int>::SortBox(void)"
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(438): message : выполняется компиляция ссылки на экземпляр шаблон функции "SortBox<int>::SortBox(void)"
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(438): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "SortBox<int>"
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(353,27): warning C4244: -=: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(340): message : во время компиляции функции-члена класс шаблон "int SortBox<int>::getDigit(T,int)"
+          with
+          [
+              T=int
+          ]
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(376): message : выполняется компиляция ссылки на экземпляр шаблон функции "int SortBox<int>::getDigit(T,int)"
+          with
+          [
+              T=int
+          ]
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(10): message : во время компиляции функции-члена класс шаблон "SortBox<int>::SortBox(void)"
+C:\Users\max\source\repos\sortbox\sortbox\sortbox.cpp(438): message : выполняется компиляция ссылки на экземпляр шаблон функции "SortBox<int>::SortBox(void)"
   sortbox.vcxproj -> C:\Users\max\source\repos\sortbox\x64\Debug\sortbox.exe
